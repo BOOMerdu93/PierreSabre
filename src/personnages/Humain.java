@@ -30,14 +30,14 @@ public class Humain {
 	}
 	
 	
-	public void direBonjour(String nom, String BoissonFavorite)
+	public void direBonjour()
 	{
-		parler("Bonjour ! Je m'appelle " + nom + " et j'aime boire du "+ BoissonFavorite);
+		parler("Bonjour ! Je m'appelle " + getNom() + " et j'aime boire du "+ getBoissonFavorite()+".");
 	}
 	
-	public void boire(String BoissonFavorite)
+	public void boire()
 	{
-		parler("Mmmmm, Un bon verre de " + BoissonFavorite + " ! Gloups !");
+		parler("Mmmmm, Un bon verre de " + getBoissonFavorite() + " ! Gloups !");
 	}
 	
 	public void gagnerArgent(int gain)
@@ -54,11 +54,11 @@ public class Humain {
 	{
 		if (prix > argent)
 		{
-			parler("Je n'ai plus que " + argent + " en poche, je ne peux pas m'offrir" + bien + " à "+ prix + " sous");
+			parler("Je n'ai plus que " + argent + " en poche, je ne peux pas m'offrir" + bien + " Ã  "+ prix + " sous");
 		}
 		else
 		{
-			parler("J'ai "+ argent + " sous en poche. Je vais pouvoir m'offrir" + bien + " à " +prix+ " sous.");
+			parler("J'ai "+ argent + " sous en poche. Je vais pouvoir m'offrir" + bien + " Ã  " +prix+ " sous.");
 			perdreArgent(prix);
 		}	
 	}
